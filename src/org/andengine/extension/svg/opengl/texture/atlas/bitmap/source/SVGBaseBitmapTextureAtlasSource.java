@@ -4,6 +4,9 @@ import org.andengine.extension.svg.adt.SVG;
 import org.andengine.opengl.texture.atlas.bitmap.source.PictureBitmapTextureAtlasSource;
 import org.andengine.util.debug.Debug;
 
+import android.graphics.Bitmap;
+import android.graphics.Bitmap.Config;
+
 
 /**
  * (c) 2010 Nicolas Gramlich 
@@ -53,6 +56,12 @@ public class SVGBaseBitmapTextureAtlasSource extends PictureBitmapTextureAtlasSo
 	public SVGBaseBitmapTextureAtlasSource deepCopy() {
 		Debug.w(this.getClass().getSimpleName() + ".deepCopy() does not actually deepCopy the SVG!");
 		return new SVGBaseBitmapTextureAtlasSource(this.mSVG, this.mTextureX, this.mTextureY, this.mTextureWidth, this.mTextureHeight);
+	}
+
+	@Override
+	public Bitmap onLoadBitmap(Config pBitmapConfig, boolean pMutable) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	// ===========================================================
